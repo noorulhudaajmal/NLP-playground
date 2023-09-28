@@ -8,7 +8,6 @@ def simple_hash_table(values_list: list, n_bins: int) -> dict:
     :param n_bins: number of bins in hashtable
     :return: hash table
     """
-
     def hash_function(value: int, n_bins: int) -> int:
         return int(value) % n_bins
 

@@ -26,11 +26,11 @@ for universe_id in range(N_UNIVERSES):  # there are 25 hashes
     hash_tables.append(hash_table)
     id_tables.append(id_table)
 
-
 doc_to_search = tweets[DOC_ID]
 vec_to_search = doc_vec_matrix[DOC_ID]
 
-nearest_neighbor_ids = approximate_knn(DOC_ID, vec_to_search, planes_list, hash_tables, id_tables, k=3, num_universes_to_use=5)
+nearest_neighbor_ids = approximate_knn(DOC_ID, vec_to_search, planes_list, hash_tables, id_tables, k=3,
+                                       num_universes_to_use=5)
 
 print(f"Nearest neighbors for document {DOC_ID}")
 print(f"Document contents: {doc_to_search}")

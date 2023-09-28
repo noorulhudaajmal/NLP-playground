@@ -29,6 +29,7 @@ def process_text(text: str):
     text = re.sub(r'\$\w*', '', text)
     text = re.sub(r'https?:\/\/.*[\r\n]*', '', text)
     text = re.sub(r'#', '', text)
+
     tokens = word_tokenize(text)
     text_clean = [stemmer.stem(word) for word in tokens if (word not in stop_words and word not in string.punctuation)]
     return text_clean
